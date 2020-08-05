@@ -7,32 +7,34 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
 import './styles.css'
+import { Link } from 'react-router-dom';
 
 function Landing(){
     return (
         <div id="page-landing">
-            <div id="page-landing-content" className="container">
+            <div className="container" id="page-landing-content">
                 <div className="logo-container">
-                    <img src={logoImg} alt="Proffy logo"/>
-                    <h2>Sua plataforma de estudos on-line</h2>
+                    <img src={logoImg} alt="Proffy" />
+                    <h2>Sua Plataforma de estudos online</h2>
                 </div>
-                <div className="landing-image">
-                    <img src={landingImg} alt="Plataforma de estudos" className="hero-image"/>  
-                </div>
+                  
+                <img src={landingImg} alt="Plataforma de estudos" className="hero-image"/>  
+            
                 <div className="buttons-container">
-                    <a href="" className="study">
+                    <Link to="/study" className="study">
                         <img src={studyIcon} alt="Estudar"/> Estudar
-                    </a>
+                    </Link>
 
-                    <a href="" className="give-classes">
+                    <Link to="/give-classes" className="give-classes">
                         <img src={giveClassesIcon} alt="Ministrar Aulas"/> Ministrar aulas
-                    </a>
+                    </Link>
                 </div>
-                    <span className="total-connections">
-                        Total de 1000 Conexões já realizadas <img src={purpleHeartIcon} alt="Coração Roxo"/>
-                    </span>
+                <span className="total-connections">
+                    Total de 1000 Conexões já realizadas <img src={purpleHeartIcon} alt="Coração Roxo"/>
+                </span>
             </div>
         </div>
+        
     )    
 }
 
